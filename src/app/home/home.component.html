@@ -1,0 +1,15 @@
+<nav class="navbar fixed-top navbar-light bg-white">
+  <div class="container">
+    <div class="logo"></div>
+    <div>
+      <div class="add-post btn" data-toggle="modal" data-target="#incluirPublicacao"></div>
+      <a class="btn btn-primary" href="#" (click)="sair()" style="margin-left: 25px;">Log Out</a>
+    </div>
+  </div>  
+</nav>
+
+<br /><br /><br />
+<div class="container">
+  <app-publicacoes #publicacoes></app-publicacoes>
+  <app-incluir-publicacao (atualizarTimeLine)="atualizarTimeLine()"></app-incluir-publicacao>
+</div>

@@ -1,0 +1,37 @@
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <div class="card-title"></div>
+    
+    <form [formGroup]="formulario" (ngSubmit)="autenticar()">
+      <div class="form-group">
+        <input 
+          type="email" 
+          class="form-control" 
+          placeholder="E-mail"
+          formControlName="email"
+        >
+      </div>
+      <div class="form-group">
+        <input 
+          type="password"
+          class="form-control" 
+          placeholder="password"
+          formControlName="senha"
+        >
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm btn-block">Log in</button>
+    </form>
+    <hr />
+
+    <p class="small text-danger text-center">The username you entered does not belong to an account. Please check your username and try again.</p>
+
+  </div>
+</div>
+<br />
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <p class="card-text">
+      Do not have an account? <a href="#" class="card-link" (click)="exibirPainelCadastro()">Register</a>
+    </p> 
+  </div>
+</div>
